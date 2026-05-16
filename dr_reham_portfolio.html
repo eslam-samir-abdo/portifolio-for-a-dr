@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Reham Samir — Regulatory Affairs Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#f8f6f2;color:#1a1a1a;font-family:'DM Sans',sans-serif;min-height:100vh;}
+.top-bar{background:#0f4c3a;color:#e8f5f0;padding:0.6rem 2rem;font-size:11px;display:flex;justify-content:space-between;align-items:center;letter-spacing:0.08em;}
+.hero-wrap{background:#0f4c3a;padding:3.5rem 2.5rem 4rem;}
+.hero-inner{max-width:900px;margin:0 auto;}
+.hero-tag{font-size:11px;letter-spacing:0.2em;color:#7ecfb3;text-transform:uppercase;margin-bottom:1.2rem;}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4.2rem);font-weight:700;color:#fff;line-height:1.1;margin-bottom:0.5rem;}
+.hero-name span{color:#7ecfb3;}
+.hero-title{font-size:15px;color:rgba(232,245,240,0.65);margin-bottom:1.5rem;line-height:1.7;max-width:600px;}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:2rem;}
+.chip{font-size:11px;padding:5px 14px;border-radius:20px;border:1px solid rgba(126,207,179,0.3);color:#7ecfb3;letter-spacing:0.05em;}
+.hero-contacts{display:flex;gap:1.5rem;flex-wrap:wrap;}
+.hc{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(232,245,240,0.6);}
+.hc i{font-size:14px;color:#7ecfb3;}
+.body-wrap{max-width:900px;margin:0 auto;padding:2.5rem;}
+.two-col{display:grid;grid-template-columns:1fr 300px;gap:2rem;align-items:start;}
+@media(max-width:680px){.two-col{grid-template-columns:1fr;}}
+.section{margin-bottom:2.5rem;}
+.sec-label{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:#0f4c3a;font-weight:500;margin-bottom:1rem;display:flex;align-items:center;gap:10px;}
+.sec-label::after{content:'';flex:1;height:1px;background:#d4cfc6;}
+.exp-card{background:#fff;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem;border:0.5px solid #e2ddd5;position:relative;}
+.exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#0f4c3a;border-radius:3px 0 0 3px;}
+.exp-date{font-size:10px;color:#7ecfb3;letter-spacing:0.1em;margin-bottom:4px;font-weight:500;}
+.exp-role{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:2px;}
+.exp-company{font-size:12px;color:#7a7570;margin-bottom:8px;}
+.exp-desc{font-size:12px;color:#5a5550;line-height:1.65;}
+.del-btn{position:absolute;top:10px;right:10px;background:none;border:none;cursor:pointer;color:#ccc;font-size:16px;padding:2px 6px;border-radius:4px;transition:color 0.2s;}
+.del-btn:hover{color:#e24b4a;}
+.cert-box{background:#fff;border-radius:12px;padding:0.5rem 1.5rem;border:0.5px solid #e2ddd5;}
+.cert-item{display:flex;align-items:flex-start;gap:10px;padding:0.85rem 0;border-bottom:0.5px solid #e8e4de;position:relative;}
+.cert-item:last-child{border-bottom:none;}
+.cert-dot{width:28px;height:28px;border-radius:50%;background:#e8f5f0;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.cert-dot i{font-size:14px;color:#0f4c3a;}
+.cert-year{font-size:10px;color:#7ecfb3;font-weight:500;margin-bottom:2px;}
+.cert-name{font-size:12px;color:#1a1a1a;line-height:1.5;}
+.side-card{background:#fff;border-radius:12px;padding:1.25rem 1.5rem;margin-bottom:1rem;border:0.5px solid #e2ddd5;}
+.skill-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:0.5px solid #f0ece6;position:relative;}
+.skill-row:last-child{border-bottom:none;}
+.skill-name-txt{font-size:12px;color:#2a2a2a;}
+.skill-dots{display:flex;gap:4px;}
+.dot{width:7px;height:7px;border-radius:50%;background:#e2ddd5;}
+.dot.on{background:#0f4c3a;}
+.lang-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;}
+.lang-name{font-size:13px;color:#1a1a1a;font-weight:500;}
+.lang-lvl{font-size:11px;padding:3px 10px;border-radius:12px;background:#e8f5f0;color:#0f4c3a;}
+.tool-grid{display:flex;flex-wrap:wrap;gap:6px;}
+.tool-tag{font-size:11px;padding:4px 10px;border-radius:6px;background:#f3f0ea;color:#3a3530;border:0.5px solid #ddd9d0;cursor:pointer;transition:all 0.2s;}
+.tool-tag:hover{background:#ffe8e8;border-color:#e24b4a;color:#a32d2d;}
+.soft-wrap{display:flex;flex-wrap:wrap;gap:6px;}
+.soft-tag{font-size:11px;padding:4px 11px;border-radius:20px;border:0.5px solid #ccc8c0;color:#4a4540;cursor:pointer;transition:all 0.2s;}
+.soft-tag:hover{background:#ffe8e8;border-color:#e24b4a;color:#a32d2d;}
+.edu-card{background:#0f4c3a;border-radius:12px;padding:1.25rem 1.5rem;color:#e8f5f0;}
+.edu-uni{font-size:13px;font-weight:500;color:#fff;margin-bottom:4px;}
+.edu-deg{font-size:12px;color:#7ecfb3;margin-bottom:4px;}
+.edu-gpa{font-size:11px;color:rgba(232,245,240,0.6);}
+footer{text-align:center;padding:1.5rem;font-size:11px;color:#aaa59a;border-top:0.5px solid #e2ddd5;letter-spacing:0.05em;}
+.add-btn{display:flex;align-items:center;gap:6px;font-size:12px;color:#0f4c3a;background:#e8f5f0;border:0.5px dashed #7ecfb3;border-radius:8px;padding:7px 14px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif;margin-top:8px;}
+.add-btn:hover{background:#d0ede3;}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:100;align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:16px;padding:2rem;width:480px;max-width:90vw;}
+.modal h3{font-size:16px;font-weight:500;color:#0f4c3a;margin-bottom:1.25rem;}
+.modal label{font-size:11px;color:#7a7570;letter-spacing:0.05em;display:block;margin-bottom:4px;margin-top:12px;}
+.modal input,.modal textarea,.modal select{width:100%;padding:8px 12px;border:0.5px solid #d4cfc6;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:13px;color:#1a1a1a;background:#faf9f6;outline:none;}
+.modal textarea{height:70px;resize:none;}
+.modal-actions{display:flex;gap:8px;margin-top:1.25rem;justify-content:flex-end;}
+.btn-save{background:#0f4c3a;color:#fff;border:none;border-radius:8px;padding:8px 20px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-save:hover{background:#1a6e54;}
+.btn-cancel{background:transparent;color:#7a7570;border:0.5px solid #d4cfc6;border-radius:8px;padding:8px 16px;font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.level-select{display:flex;gap:8px;margin-top:4px;}
+.level-opt{flex:1;text-align:center;padding:6px;border:0.5px solid #d4cfc6;border-radius:8px;font-size:12px;cursor:pointer;color:#7a7570;transition:all 0.2s;}
+.level-opt.selected{background:#0f4c3a;color:#fff;border-color:#0f4c3a;}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <span>Dr. Reham Samir — Regulatory Affairs</span>
+  <span>Cairo, Egypt &nbsp;|&nbsp; 01100653757</span>
+</div>
+
+<div class="hero-wrap">
+  <div class="hero-inner">
+    <div class="hero-tag">Pharm-D &nbsp;·&nbsp; Regulatory Affairs Specialist</div>
+    <div class="hero-name">Dr. Reham <span>Samir</span></div>
+    <div class="hero-title">Pharmacist with hands-on experience in regulatory submissions, pharmaceutical compliance, and health-tech data mapping. Skilled in local &amp; international regulatory requirements (EDA, EMA, FDA).</div>
+    <div class="hero-chips">
+      <span class="chip">Regulatory Affairs</span>
+      <span class="chip">EDA · EMA · FDA</span>
+      <span class="chip">Pharmaceutical Manufacturing</span>
+      <span class="chip">Medical Coding</span>
+      <span class="chip">Health-Tech</span>
+    </div>
+    <div class="hero-contacts">
+      <span class="hc"><i class="ti ti-phone"></i> 01100653757</span>
+      <span class="hc"><i class="ti ti-mail"></i> Reham Samir Abdo Zaghlol</span>
+      <span class="hc"><i class="ti ti-brand-linkedin"></i> DR/ Reham — Verified</span>
+      <span class="hc"><i class="ti ti-map-pin"></i> Warraq, Giza, Egypt</span>
+    </div>
+  </div>
+</div>
+
+<div class="body-wrap">
+  <div class="two-col">
+    <div>
+
+      <div class="section">
+        <div class="sec-label">Professional experience</div>
+        <div id="exp-list">
+          <div class="exp-card">
+            <button class="del-btn" onclick="delCard(this,'exp-card')" title="حذف"><i class="ti ti-x"></i></button>
+            <div class="exp-date">NOV 2025 — PRESENT</div>
+            <div class="exp-role">Pharmacist Mapping Specialist</div>
+            <div class="exp-company"><i class="ti ti-building" style="font-size:12px;vertical-align:-1px;margin-right:4px"></i>LAVIVA HEALTH</div>
+            <div class="exp-desc">Organizing and mapping pharmacy and medication data to support health-tech solutions and improve pharmaceutical system efficiency.</div>
+          </div>
+          <div class="exp-card">
+            <button class="del-btn" onclick="delCard(this,'exp-card')" title="حذف"><i class="ti ti-x"></i></button>
+            <div class="exp-date">AUG 2025</div>
+            <div class="exp-role">Regulatory Affairs Intern</div>
+            <div class="exp-company"><i class="ti ti-building" style="font-size:12px;vertical-align:-1px;margin-right:4px"></i>Greenline-Egy</div>
+            <div class="exp-desc">Applied knowledge of local &amp; international regulatory requirements (EDA, EMA, FDA). Handled regulatory submissions, product classification, and licensing procedures.</div>
+          </div>
+          <div class="exp-card">
+            <button class="del-btn" onclick="delCard(this,'exp-card')" title="حذف"><i class="ti ti-x"></i></button>
+            <div class="exp-date">AUG 2023 — JAN 2024</div>
+            <div class="exp-role">Community Pharmacist</div>
+            <div class="exp-company"><i class="ti ti-building" style="font-size:12px;vertical-align:-1px;margin-right:4px"></i>Dr. Samir Pharmacy</div>
+            <div class="exp-desc">Dispensing medications, counseling patients, and ensuring safe and effective drug use in a retail pharmacy setting.</div>
+          </div>
+        </div>
+        <button class="add-btn" onclick="openModal('exp')"><i class="ti ti-plus"></i> إضافة خبرة جديدة</button>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Certificates &amp; training</div>
+        <div class="cert-box">
+          <div id="cert-list">
+            <div class="cert-item"><div class="cert-dot"><i class="ti ti-certificate"></i></div><div><div class="cert-year">DEC 2025</div><div class="cert-name">EDA Certificate — Regulatory Affairs of Medical Devices</div></div><button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button></div>
+            <div class="cert-item"><div class="cert-dot"><i class="ti ti-certificate"></i></div><div><div class="cert-year">DEC 2025</div><div class="cert-name">EDA Certificate — Regulatory Affairs of Pharmaceutical Products</div></div><button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button></div>
+            <div class="cert-item"><div class="cert-dot"><i class="ti ti-award"></i></div><div><div class="cert-year">NOV 2025</div><div class="cert-name">Certificate of Completion — Regulatory Affairs Internship</div></div><button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button></div>
+            <div class="cert-item"><div class="cert-dot"><i class="ti ti-book"></i></div><div><div class="cert-year">NOV 2025</div><div class="cert-name">Entry Level Course in Regulatory Affairs</div></div><button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button></div>
+            <div class="cert-item"><div class="cert-dot"><i class="ti ti-star"></i></div><div><div class="cert-year">2025</div><div class="cert-name">2nd Best Project — Pharmacology Course</div></div><button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button></div>
+            <div class="cert-item"><div class="cert-dot"><i class="ti ti-book"></i></div><div><div class="cert-year">2024</div><div class="cert-name">Online Diploma — Medical Coding &amp; Billing</div></div><button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button></div>
+            <div class="cert-item"><div class="cert-dot"><i class="ti ti-award"></i></div><div><div class="cert-year">2024</div><div class="cert-name">Best Participant — Rameda Pharmaceutical Internship</div></div><button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button></div>
+          </div>
+        </div>
+        <button class="add-btn" onclick="openModal('cert')"><i class="ti ti-plus"></i> إضافة شهادة</button>
+      </div>
+
+    </div>
+
+    <div>
+      <div class="section">
+        <div class="sec-label">Education</div>
+        <div class="edu-card">
+          <div class="edu-uni">Faculty of Pharmacy, Cairo University</div>
+          <div class="edu-deg">Pharm-D Bachelor — Excellent</div>
+          <div class="edu-gpa">cGPA 3.5 / 4.0 · Class of 2025</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Languages</div>
+        <div class="side-card">
+          <div id="lang-list">
+            <div class="lang-row"><span class="lang-name">Arabic</span><span class="lang-lvl">Native</span></div>
+            <div class="lang-row"><span class="lang-name">English</span><span class="lang-lvl">Fluent</span></div>
+          </div>
+        </div>
+        <button class="add-btn" onclick="openModal('lang')"><i class="ti ti-plus"></i> إضافة لغة</button>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Technical skills</div>
+        <div class="side-card" id="skill-list">
+          <div class="skill-row"><span class="skill-name-txt">Regulatory Documentation</span><div class="skill-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+          <div class="skill-row"><span class="skill-name-txt">EDA Portal</span><div class="skill-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></div>
+          <div class="skill-row"><span class="skill-name-txt">Medical Coding</span><div class="skill-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div></div></div>
+          <div class="skill-row"><span class="skill-name-txt">GS1 Standards</span><div class="skill-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot"></div><div class="dot"></div></div></div>
+          <div class="skill-row"><span class="skill-name-txt">Microsoft Office</span><div class="skill-dots"><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div><div class="dot on"></div></div></div>
+        </div>
+        <button class="add-btn" onclick="openModal('skill')"><i class="ti ti-plus"></i> إضافة مهارة</button>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Tools</div>
+        <div class="side-card">
+          <div class="tool-grid" id="tools-list">
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">MS Office</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">Google Docs</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">EDA Portal</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">GS1</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">Meta Ads</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">Dreamfora</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">Gamma AI</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">ChatGPT</span>
+            <span class="tool-tag" onclick="this.remove()" title="اضغط للحذف">Gemini</span>
+          </div>
+        </div>
+        <button class="add-btn" onclick="openModal('tool')"><i class="ti ti-plus"></i> إضافة أداة</button>
+      </div>
+
+      <div class="section">
+        <div class="sec-label">Soft skills</div>
+        <div class="soft-wrap" id="soft-list">
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Leadership</span>
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Communication</span>
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Problem-solving</span>
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Adaptability</span>
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Critical thinking</span>
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Time management</span>
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Teamwork</span>
+          <span class="soft-tag" onclick="this.remove()" title="اضغط للحذف">Attention to detail</span>
+        </div>
+        <button class="add-btn" onclick="openModal('soft')" style="margin-top:8px"><i class="ti ti-plus"></i> إضافة مهارة ناعمة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>reham.samir · regulatory affairs pharmacist · cairo, egypt · 2025</footer>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h3 id="modal-title">إضافة</h3>
+    <div id="modal-body"></div>
+    <div class="modal-actions">
+      <button class="btn-cancel" onclick="closeModal()">إلغاء</button>
+      <button class="btn-save" onclick="saveModal()">إضافة</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentType = '';
+let selectedLevel = 3;
+let selectedLangLevel = 'Intermediate';
+
+function openModal(type) {
+  currentType = type;
+  selectedLevel = 3;
+  selectedLangLevel = 'Intermediate';
+  const titles = {
+    exp: 'إضافة خبرة جديدة',
+    cert: 'إضافة شهادة أو تدريب',
+    lang: 'إضافة لغة',
+    skill: 'إضافة مهارة تقنية',
+    tool: 'إضافة أداة',
+    soft: 'إضافة مهارة ناعمة'
+  };
+  document.getElementById('modal-title').textContent = titles[type];
+  const bodies = {
+    exp: `<label>المسمى الوظيفي</label><input id="f1" placeholder="مثال: Regulatory Affairs Specialist">
+          <label>اسم الجهة / الشركة</label><input id="f2" placeholder="مثال: Ministry of Health">
+          <label>التاريخ</label><input id="f3" placeholder="مثال: JAN 2026 — PRESENT">
+          <label>وصف قصير</label><textarea id="f4" placeholder="اوصفي المهام الرئيسية..."></textarea>`,
+    cert: `<label>اسم الشهادة أو التدريب</label><input id="f1" placeholder="مثال: GMP Certificate">
+           <label>السنة</label><input id="f2" placeholder="مثال: 2026">`,
+    lang: `<label>اللغة</label><input id="f1" placeholder="مثال: French">
+           <label>المستوى</label>
+           <div class="level-select">
+             <div class="level-opt" onclick="selLang(this,'Native')">Native</div>
+             <div class="level-opt" onclick="selLang(this,'Fluent')">Fluent</div>
+             <div class="level-opt selected" onclick="selLang(this,'Intermediate')">Intermediate</div>
+             <div class="level-opt" onclick="selLang(this,'Basic')">Basic</div>
+           </div>`,
+    skill: `<label>اسم المهارة</label><input id="f1" placeholder="مثال: ICH Guidelines">
+            <label>المستوى (1 = مبتدئ، 5 = خبير)</label>
+            <div class="level-select">
+              ${[1,2,3,4,5].map(n=>`<div class="level-opt${n===3?' selected':''}" onclick="selLevel(this,${n})">${n}</div>`).join('')}
+            </div>`,
+    tool: `<label>اسم الأداة أو البرنامج</label><input id="f1" placeholder="مثال: Veeva Vault">`,
+    soft: `<label>المهارة الناعمة</label><input id="f1" placeholder="مثال: Negotiation">`
+  };
+  document.getElementById('modal-body').innerHTML = bodies[type];
+  document.getElementById('modal').classList.add('open');
+  const first = document.getElementById('f1');
+  if (first) setTimeout(() => first.focus(), 100);
+}
+
+function selLang(el, val) {
+  selectedLangLevel = val;
+  el.parentElement.querySelectorAll('.level-opt').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function selLevel(el, n) {
+  selectedLevel = n;
+  el.parentElement.querySelectorAll('.level-opt').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+}
+
+function saveModal() {
+  const f1 = document.getElementById('f1')?.value.trim();
+  const f2 = document.getElementById('f2')?.value.trim() || '';
+  const f3 = document.getElementById('f3')?.value.trim() || '';
+  const f4 = document.getElementById('f4')?.value.trim() || '';
+  if (!f1) { document.getElementById('f1').style.borderColor = '#e24b4a'; return; }
+
+  if (currentType === 'exp') {
+    const card = document.createElement('div');
+    card.className = 'exp-card';
+    card.innerHTML = `<button class="del-btn" onclick="delCard(this,'exp-card')" title="حذف"><i class="ti ti-x"></i></button>
+      <div class="exp-date">${f3}</div>
+      <div class="exp-role">${f1}</div>
+      <div class="exp-company"><i class="ti ti-building" style="font-size:12px;vertical-align:-1px;margin-right:4px"></i>${f2}</div>
+      <div class="exp-desc">${f4}</div>`;
+    document.getElementById('exp-list').prepend(card);
+  }
+  else if (currentType === 'cert') {
+    const item = document.createElement('div');
+    item.className = 'cert-item';
+    item.innerHTML = `<div class="cert-dot"><i class="ti ti-certificate"></i></div>
+      <div><div class="cert-year">${f2}</div><div class="cert-name">${f1}</div></div>
+      <button class="del-btn" style="position:static;margin-left:auto" onclick="this.closest('.cert-item').remove()" title="حذف"><i class="ti ti-x"></i></button>`;
+    document.getElementById('cert-list').prepend(item);
+  }
+  else if (currentType === 'lang') {
+    const row = document.createElement('div');
+    row.className = 'lang-row';
+    row.innerHTML = `<span class="lang-name">${f1}</span><span class="lang-lvl">${selectedLangLevel}</span>`;
+    document.getElementById('lang-list').appendChild(row);
+  }
+  else if (currentType === 'skill') {
+    const dots = Array.from({length: 5}, (_, i) => `<div class="dot${i < selectedLevel ? ' on' : ''}"></div>`).join('');
+    const row = document.createElement('div');
+    row.className = 'skill-row';
+    row.innerHTML = `<span class="skill-name-txt">${f1}</span><div class="skill-dots">${dots}</div>`;
+    document.getElementById('skill-list').appendChild(row);
+  }
+  else if (currentType === 'tool') {
+    const tag = document.createElement('span');
+    tag.className = 'tool-tag';
+    tag.title = 'اضغط للحذف';
+    tag.textContent = f1;
+    tag.onclick = function() { this.remove(); };
+    document.getElementById('tools-list').appendChild(tag);
+  }
+  else if (currentType === 'soft') {
+    const tag = document.createElement('span');
+    tag.className = 'soft-tag';
+    tag.title = 'اضغط للحذف';
+    tag.textContent = f1;
+    tag.onclick = function() { this.remove(); };
+    document.getElementById('soft-list').appendChild(tag);
+  }
+  closeModal();
+}
+
+function delCard(btn, cls) {
+  btn.closest('.' + cls).remove();
+}
+
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
+</body>
+</html>
